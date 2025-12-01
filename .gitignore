@@ -181,3 +181,4 @@ cython_debug/
 .cursorindexingignore
 *.pdf
 tokens.txt
+latest
