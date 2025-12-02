@@ -109,7 +109,6 @@ with gr.Blocks(title="Predictor & Resizer API Client") as demo:
         inputs=[input_image, w_input, h_input],
         outputs=resize_output
     )
-
 # Lanzar la aplicación
 if __name__ == "__main__":
     demo.launch()
