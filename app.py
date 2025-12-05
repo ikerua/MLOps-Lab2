@@ -2,10 +2,11 @@ import gradio as gr
 import requests
 from PIL import Image
 import io
-# URL of the API created with FastAPI
-API_URL = "https://predictor-api-4pbm.onrender.com"
 
-
+# URL de tu API
+# Si estás ejecutando esto en local, suele ser http://127.0.0.1:8000
+# Si la API está en Render, usa la URL de Render (ej: https://tuproyecto.onrender.com)
+API_URL = "http://127.0.0.1:8000"
 
 def solicitar_prediccion(image_path):
     """
@@ -83,7 +84,8 @@ with gr.Blocks(title="Predictor & Resizer API Client") as demo:
             predict_btn = gr.Button("🔍 Obtener Predicción", variant="primary")
             predict_output = gr.Textbox(label="Resultado de la API")
 
-            gr.Html("<hr>") # Separador visual
+            # CORRECCIÓN AQUÍ: gr.HTML en mayúsculas
+            gr.HTML("<hr>") 
 
             # --- Sección de Resize ---
             gr.Markdown("### 3. Redimensionar (Resize)")
@@ -109,6 +111,7 @@ with gr.Blocks(title="Predictor & Resizer API Client") as demo:
         inputs=[input_image, w_input, h_input],
         outputs=resize_output
     )
+
 # Lanzar la aplicación
 if __name__ == "__main__":
     demo.launch()
