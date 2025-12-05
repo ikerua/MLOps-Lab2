@@ -6,7 +6,7 @@ import io
 # URL de tu API
 # Si estás ejecutando esto en local, suele ser http://127.0.0.1:8000
 # Si la API está en Render, usa la URL de Render (ej: https://tuproyecto.onrender.com)
-API_URL = "http://127.0.0.1:8000"
+API_URL = "https://predictor-api-4pbm.onrender.com"
 
 def solicitar_prediccion(image_path):
     """
